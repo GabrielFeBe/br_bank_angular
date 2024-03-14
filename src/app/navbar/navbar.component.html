@@ -1,0 +1,15 @@
+<nav>
+  <button (click)="selectedToggle()">
+  <span> 
+    Contas
+  </span> 
+  </button>
+  <ul *ngIf="selected">
+    <li>
+      <a routerLink="/create">Create</a>
+    </li>
+    <li> 
+      <a routerLink="/login">Login</a>
+    </li>
+  </ul>
+</nav>

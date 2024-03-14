@@ -1,0 +1,12 @@
+<form action="">
+<input type="email" placeholder="Coloque seu email" [(ngModel)]="email" name="email">
+<input type="password" placeholder="Coloque sua senha"  [(ngModel)]="password" name="password">
+<input type="password" placeholder="Confirme sua senha" [(ngModel)]="confirmPassword" name="confirmPassword" >
+<input type="text" placeholder="Coloque seu cpf" [(ngModel)]="cpf" name="cpf">
+<input type="text" placeholder="Coloque aqui seu nome completo" [(ngModel)]="name" name="name">
+<select name="" id="" [(ngModel)]="type" name="type">
+<option value="CONTA_CORRENTE">Corrente</option>
+<option value="POUPANCA">Poupança</option>
+</select>
+<button (click)="registerPerson()">Register</button>
+</form>

@@ -1,0 +1,31 @@
+ul{
+  top: 42px;
+  position: absolute;
+  left: 121px;
+  li{
+  list-style-type: none;
+  }
+}
+button{
+  cursor: pointer;
+  left: 121px;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  font-size: 16px;
+  line-height: 1.125;
+  letter-spacing: .015em;
+  margin: 0 16px 0 0;
+  display: flex;
+  align-items: center;
+  height: 24px;
+  border-radius: 4px;
+  padding: 16px 8px;
+  text-decoration: none;
+  span {
+    color: black;
+  }
+}
+button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
