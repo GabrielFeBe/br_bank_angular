@@ -11,8 +11,8 @@ export class LoginService {
   private loginUrl = endpoint + 'auth/login'
   constructor(private http:HttpClient) { }
 
-login(account:Login):Observable<string>{
-  return this.http.post<string>(endpoint, account);
+login(account:Login):Observable<any>{
+  return this.http.post<any>(this.loginUrl, account);
 }
 
 }

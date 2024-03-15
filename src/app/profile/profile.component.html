@@ -1,1 +1,23 @@
-<p>profile works!</p>
+<div *ngIf="account">
+  <p >{{account.email}}</p>
+  <p>{{account.balance}} </p>
+  <form action="">
+    <input type="number" name="balance" id="balance" [(ngModel)]="balance">
+    <button (click)="depositMoney()">deposit</button>
+  </form>
+</div>
+<a routerLink="/deactivate">Deactivate</a>
+<form action="" *ngIf="!accountToTransfer; else transferingMoney">
+  <h2>Transfer Money Using Cpf</h2>
+  <input type="text" name="cpf" id="cpf" [(ngModel)]="cpf">
+  <input type="number" name="amount" id="amount" [(ngModel)]="amount">
+  <button (click)="prepareTransfer()">Transfer</button>
+</form>
+<ng-template #transferingMoney>
+  <form action="">
+    <p>You ara going to transfer {{amount}} to {{accountToTransfer.name}}</p>
+    <p>Your new balance will be: {{account.balance - amount}}</p>
+    <button (click)="confirmTransfer()">Confirm</button>
+    <button>Cancel</button>
+  </form>
+</ng-template>

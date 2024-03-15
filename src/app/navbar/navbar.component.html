@@ -6,10 +6,16 @@
   </button>
   <ul *ngIf="selected">
     <li>
-      <a routerLink="/create">Create</a>
+      <a routerLink="/create" (click)="selectedToggle()" *ngIf="!isLoged">Create</a>
     </li>
     <li> 
-      <a routerLink="/login">Login</a>
+      <a routerLink="/login" (click)="selectedToggle()"  *ngIf="!isLoged">Login</a>
+    </li>
+    <li>
+      <button (click)="logout()" *ngIf="isLoged">Logout</button>
+    </li>
+    <li *ngIf="isLoged">
+      <a (click)="selectedToggle()" routerLink="/profile" >Profile</a>
     </li>
   </ul>
 </nav>
