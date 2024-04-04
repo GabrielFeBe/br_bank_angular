@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { CookieService } from 'ngx-cookie-service';
-import Account from '../../utils/account';
 import { ProfileService } from './profile.service';
 
 @Component({
@@ -11,7 +8,7 @@ import { ProfileService } from './profile.service';
 })
 export class ProfileComponent implements OnInit {
 
-constructor(private cookies:CookieService, private router:Router, private service:ProfileService){}
+constructor(  private service:ProfileService){}
   balance = 0;
   account:any | null = null;
   amount = 0;
@@ -19,8 +16,6 @@ constructor(private cookies:CookieService, private router:Router, private servic
   accountToTransfer: any | null = null;
 
   ngOnInit(): void {
-    const token = this.cookies.get('auth');
-    if(!token) this.router.navigate(['/login']);
      this.service.getAccount().subscribe((res)=>{
       this.account = res;
     },(err)=>{ console.log(err)}, ()=>{})

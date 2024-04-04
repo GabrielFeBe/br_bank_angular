@@ -26,7 +26,7 @@ login(){
 new LoginObj(this.email, this.password
   )
   ).subscribe((res)=>{
-    this.cookies.set('auth',res.token);
+    this.cookies.set('auth',res.token, {expires: 1});
     this.location.replaceState('/profile');
     window.location.reload();
   },(err)=>{

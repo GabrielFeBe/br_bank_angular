@@ -1,0 +1,15 @@
+<main *ngIf="transactions !== null">
+  <div *ngFor="let transaction of transactions" class="transaction_containaer">
+    <p>
+      {{transaction.date |  date :'short'  }}
+    </p>
+    <p *ngIf="transaction.value > 0; else red" class="green">
+      {{transaction.value}}
+    </p>
+  <ng-template #red>
+    <p class="red">
+      {{transaction.value}}
+    </p>
+  </ng-template>
+  </div>
+</main>

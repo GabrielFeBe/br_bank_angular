@@ -12,6 +12,8 @@ import { CookieService } from 'ngx-cookie-service';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthInterceptor } from './interceptors/token.interceptor';
 import { DeactivateComponent } from './deactivate/deactivate.component';
+import { ActivateComponent } from './activate/activate.component';
+import { StatementComponent } from './statement/statement.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { DeactivateComponent } from './deactivate/deactivate.component';
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
-    DeactivateComponent
+    DeactivateComponent,
+    ActivateComponent,
+    StatementComponent
   ],
   imports: [
     BrowserModule,
