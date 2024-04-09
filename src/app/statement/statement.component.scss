@@ -12,5 +12,14 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  cursor: pointer;
+}
 
+.container_information{
+  width: 500px;
+  margin: 0 auto;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

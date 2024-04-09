@@ -17,6 +17,7 @@
   <form action="">
     <p>You ara going to transfer {{amount}} to {{accountToTransfer.name}}</p>
     <p>Your new balance will be: {{account.balance - amount}}</p>
+    <p>Type your password here: <input type="password" [(ngModel)]="password" name="password"> </p>
     <button (click)="confirmTransfer()">Confirm</button>
     <button>Cancel</button>
   </form>

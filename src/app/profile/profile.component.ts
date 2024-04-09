@@ -14,6 +14,7 @@ constructor(  private service:ProfileService){}
   amount = 0;
   cpf = ''
   accountToTransfer: any | null = null;
+  password:string='';
 
   ngOnInit(): void {
      this.service.getAccount().subscribe((res)=>{
@@ -33,14 +34,16 @@ constructor(  private service:ProfileService){}
   prepareTransfer(){
     this.service.prepareTransfer(this.cpf).subscribe((res)=>{
       this.accountToTransfer = res;
-      console.log(this.accountToTransfer);
     },(err)=>{},()=>{})
   }
 
   confirmTransfer(){
-    this.service.confirmTransfer(this.cpf, this.amount).subscribe((res)=>{
+    this.service.confirmTransfer(this.cpf, this.amount, this.password).subscribe((res)=>{
       this.accountToTransfer = null;
       this.account.balance = res;
+      this.cpf = '';
+      this.amount = 0;
+      alert('Transação efetuada com sucesso')
     },(err)=>{
       alert(err.error)
       this.accountToTransfer = null;

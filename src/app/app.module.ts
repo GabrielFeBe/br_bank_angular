@@ -14,6 +14,9 @@ import { AuthInterceptor } from './interceptors/token.interceptor';
 import { DeactivateComponent } from './deactivate/deactivate.component';
 import { ActivateComponent } from './activate/activate.component';
 import { StatementComponent } from './statement/statement.component';
+import { StatementPageComponent } from './statement-page/statement-page.component';
+import { MonthStatementComponent } from './month-statement/month-statement.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { StatementComponent } from './statement/statement.component';
     ProfileComponent,
     DeactivateComponent,
     ActivateComponent,
-    StatementComponent
+    StatementComponent,
+    StatementPageComponent,
+    MonthStatementComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

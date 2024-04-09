@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, booleanAttribute, numberAttribute } from '@angular/core';
 import { StatementService } from './statement.service';
 
 @Component({
@@ -10,10 +10,14 @@ export class StatementComponent implements OnInit {
 
   transactions: any = null;
 
+  @Input({required:true, transform: booleanAttribute}) isPreciseMonth!:boolean;
+
+  @Input({required:false, transform:numberAttribute}) month!:number | null;
+
   constructor(private service:StatementService){}
 
   ngOnInit(): void {
-    this.service.getBankStatment().subscribe((res)=>{
+    this.service.getBankStatment(this.isPreciseMonth, this.month).subscribe((res)=>{
       this.transactions = res;
       console.log(res);
     },(err)=>{
@@ -22,5 +26,16 @@ export class StatementComponent implements OnInit {
     },()=>{});
   }
 
+  getAbsoluteValue(value:number) {
+    return Math.abs(value);
+  }
+
+  showTransactionData(index:number) {
+    if(this.transactions[index].showing) {
+    this.transactions[index].showing = false; 
+    } else {
+      this.transactions[index].showing = true; 
+    }
+  }
 
 }

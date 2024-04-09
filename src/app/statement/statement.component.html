@@ -1,15 +1,33 @@
 <main *ngIf="transactions !== null">
-  <div *ngFor="let transaction of transactions" class="transaction_containaer">
-    <p>
-      {{transaction.date |  date :'short'  }}
-    </p>
-    <p *ngIf="transaction.value > 0; else red" class="green">
-      {{transaction.value}}
-    </p>
-  <ng-template #red>
-    <p class="red">
-      {{transaction.value}}
-    </p>
-  </ng-template>
-  </div>
+  <section *ngFor="let transaction of transactions; let i = index" >
+    <button class="transaction_containaer" (click)="showTransactionData(i)">
+
+      <p>
+        {{transaction.date |  date :'short'  }}
+      </p>
+      <p *ngIf="transaction.value > 0; else red" class="green">
+        {{transaction.value}}
+      </p>
+      <ng-template #red>
+        <p class="red">
+          {{transaction.value}}
+        </p>
+      </ng-template>
+    </button>
+    <article *ngIf="transaction.showing" class="container_information">
+    <div *ngIf="transaction.type === 'DEPOSIT' ">
+      You made this deposit of {{transaction.value}} at a random location for now
+    </div>
+    <div *ngIf="transaction.type === 'WITHDRAW' ">
+      You made this withdraw of {{transaction.value}} at a random location for now
+    </div>
+    <div *ngIf="transaction.type === 'TRANSFER' && transaction.value < 0">
+      You made this transaction of {{getAbsoluteValue(transaction.value)}} to: {{transaction.account.name}} 
+    </div>
+    <div *ngIf="transaction.type === 'TRANSFER' && transaction.value > 0">
+      You received this transaction of {{transaction.value}} from: {{transaction.account.name}} 
+    </div>
+    </article>
+  </section>
+  
 </main>

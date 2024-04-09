@@ -1,19 +1,18 @@
 <nav>
+  <button>
+    <a routerLink="/" >Banco</a>
+  </button>
   <button (click)="selectedToggle()">
   <span> 
-    Contas
+    Personal
   </span> 
   </button>
   <ul *ngIf="selected">
     <li>
       <a routerLink="/create" (click)="selectedToggle()" *ngIf="!isLoged">Create</a>
     </li>
-    <li> 
-      <a routerLink="/login" (click)="selectedToggle()"  *ngIf="!isLoged">Login</a>
-    </li>
-    <li>
-      <button (click)="logout()" *ngIf="isLoged">Logout</button>
-    </li>
+    
+  
     <li *ngIf="isLoged">
       <a (click)="selectedToggle()" routerLink="/profile" >Profile</a>
     </li>
@@ -21,4 +20,16 @@
       <a (click)="selectedToggle()" routerLink="/statement" >Statement</a>
     </li>
   </ul>
+
+  <button>Business</button>
+
+  <button>Loans</button>
+
+  <button>Investments</button>
+  
+  <button>
+    <a routerLink="/login" (click)="selectedToggle()"  *ngIf="!isLoged">Login</a>
+      <button (click)="logout()" *ngIf="isLoged">Logout</button>
+  </button>
+
 </nav>

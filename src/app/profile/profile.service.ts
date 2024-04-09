@@ -22,8 +22,8 @@ return this.http.post<number>(this.endpointUrl + '/deposit',{money})
   return this.http.post(this.endpointUrl + '/prepare', {cpf});
  }
 
- confirmTransfer(cpf:string,money:number):Observable<number> {
-  return this.http.post<number>(this.endpointUrl +  '/transfer', {cpf,money})
+ confirmTransfer(cpf:string,money:number, password:string):Observable<number> {
+  return this.http.post<number>(this.endpointUrl +  '/transfer', {cpf,money,password})
  }
 
 }
