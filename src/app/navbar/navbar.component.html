@@ -1,8 +1,25 @@
+<header>
+  <a routerLink="/" >
+    <h1>
+      Banco
+    </h1>
+  </a>
 <nav>
-  <button>
-    <a routerLink="/" >Banco</a>
-  </button>
-  <button (click)="selectedToggle()">
+  <ul>
+    <li>
+      <a href="">Personal</a>
+    </li>
+    <li>
+      <a href="">Business</a>
+    </li>
+    <li>
+      <a href="">Loans</a>
+    </li>
+    <li>
+      <a href="">Investments</a>
+    </li>
+  </ul>
+  <!-- <button (click)="selectedToggle()">
   <span> 
     Personal
   </span> 
@@ -30,6 +47,12 @@
   <button>
     <a routerLink="/login" (click)="selectedToggle()"  *ngIf="!isLoged">Login</a>
       <button (click)="logout()" *ngIf="isLoged">Logout</button>
-  </button>
+  </button> -->
 
 </nav>
+
+<a routerLink="/login" class="login">
+  Login
+</a>
+
+</header>
