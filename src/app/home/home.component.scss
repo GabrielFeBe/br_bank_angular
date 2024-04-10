@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50px;
+  border-radius: 70px;
   position: relative;
 }
 
@@ -21,6 +21,8 @@
   color: white;
   h2{
     margin-bottom: 25px;
+    font-size: 64px;
+    background-color: transparent;
   }
   border-radius: 50px;
 }
@@ -36,23 +38,19 @@ main{
   display: flex;
   flex-direction: column;
   gap: 25px;
-  .first_block{
-    background-color: #161616;
-    width: 100%;
-    height: 287px;
-    border-radius: 20px;
-
-  }
   section{
     display: flex;
     gap: 25px;
     background-color: #282828;
-    div{
-      width: 611px;
-      height: 286px;
-      background-color: #161616;
-      border-radius: 20px;
-
-    }
   }
+}
+
+.nextComp{
+  padding-top: 677px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 96px;
+  margin-bottom: 96px;
 }

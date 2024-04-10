@@ -17,6 +17,9 @@ import { StatementComponent } from './statement/statement.component';
 import { StatementPageComponent } from './statement-page/statement-page.component';
 import { MonthStatementComponent } from './month-statement/month-statement.component';
 import { HomeComponent } from './home/home.component';
+import { CustomBoxComponent } from './home/custom-box/custom-box.component';
+import { CustomSectionComponent } from './home/custom-section/custom-section.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { HomeComponent } from './home/home.component';
     StatementComponent,
     StatementPageComponent,
     MonthStatementComponent,
-    HomeComponent
+    HomeComponent,
+    CustomBoxComponent,
+    CustomSectionComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

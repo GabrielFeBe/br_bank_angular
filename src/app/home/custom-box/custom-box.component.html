@@ -1,0 +1,14 @@
+<div [style.width]="width" [style.height]="height" [style.color]="color" [style.background-color]="backgroundColor" [style.border-radius]="borderRadius" class="bigBox">
+  <div [ngClass]="{'smallContainer': !isBigBox}">
+    <h2 [style.font-size]="headerFont"> {{header}} </h2>
+    <p [style.margin-top]="subTextMt"> {{subText}} </p>
+    <a *ngIf="route" [routerLink]="route">Discover More</a> 
+  </div>
+  <img  src="../../../assets/hand.png" alt="" class="handStyle" *ngIf="isBigBox">
+
+  <div *ngIf="!isBigBox" class="absoluteBox">
+    <img src="../../../assets/world.png" alt="">
+    <p> {{abstoluteText}} </p>
+  </div>
+
+</div>

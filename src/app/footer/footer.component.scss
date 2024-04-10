@@ -1,0 +1,98 @@
+section{
+  width: 100%;
+  height: 291px;
+  
+}
+
+.socialsBox{
+  height: 180px;
+  width: 100%;
+  border-top: 1px solid #3A3A3A;
+  padding-left: 96px;
+  display: flex;
+  padding-top: 32px;
+  gap:96px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: #282828;
+
+}
+
+.bankBox{
+  background-color: transparent;
+  width: 82px;
+  h2{
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background-color: transparent;
+  }
+  nav{
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    a{
+      background-color: transparent;
+      img{
+        background-color: transparent;
+        height: 24px;
+        width: 24px;
+      }
+    }
+  }
+}
+
+.contact{
+  height: 110px;
+  width: 100%;
+  padding-right: 96px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  background-color: #282828;
+  button{
+    border: 0;
+    width: 131px;
+    height: 36px;
+    border-radius: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+  }
+  input{
+    width: 376px;
+    height: 36px;
+    background-color: #353535;
+    border-radius: 100px;
+    border: 0;
+    padding-left: 10px;
+  }
+}
+
+.linkTree{
+  background-color: #282828;
+  h2{
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: transparent;
+  }
+  nav{
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: transparent;
+    a,p{
+      font-size: 14px;
+      text-decoration: none;
+      color: white;
+      background-color: transparent;
+    }
+  }
+}
