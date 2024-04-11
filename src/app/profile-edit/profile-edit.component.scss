@@ -1,0 +1,60 @@
+.profileEditSection{
+  height: 1079px;
+  width: 1514px;
+  margin: 0 auto;
+  background-color: #282828;
+  border-radius: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  h2{
+    padding-top: 33.5px;
+    padding-bottom: 33.5px;
+    background-color: transparent;
+    color: white;
+    margin-left: 40px;
+  }
+  div{
+    margin-left: 40px;
+    background-color: transparent;
+    img{
+      background-color: transparent;
+      width: 96px;
+      height: 96px;
+      border-radius: 1000px;
+    }
+  }
+}
+
+.pictureBox{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+form{
+  margin-top: 33.5px;
+  margin-left: 40px;
+  background-color: transparent;
+
+}
+
+label{
+  background-color: transparent;
+  p{
+    font-weight: bold;
+    font-size: 12px;
+    color: white;
+    background-color: transparent;
+    margin-bottom: 10.5px;
+  }
+  input{
+    background-color: #353535;
+    padding-left: 8px;
+    margin-bottom: 29.5px;
+    height: 48px;
+    border-radius: 1000px;
+    width: 780px;
+    border: 0;
+  }
+}

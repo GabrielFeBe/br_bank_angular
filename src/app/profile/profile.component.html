@@ -1,24 +1,17 @@
-<div *ngIf="account">
-  <p >{{account.email}}</p>
-  <p>{{account.balance}} </p>
-  <form action="">
-    <input type="number" name="balance" id="balance" [(ngModel)]="balance">
-    <button (click)="depositMoney()">deposit</button>
-  </form>
+
+<div class="backgroundImage" [style.background-image]="imageUrl">
+
+  
+  <img src="../../assets/dollar.png" alt="" class="profilePicture">
 </div>
-<a routerLink="/deactivate">Deactivate</a>
-<form action="" *ngIf="!accountToTransfer; else transferingMoney">
-  <h2>Transfer Money Using Cpf</h2>
-  <input type="text" name="cpf" id="cpf" [(ngModel)]="cpf">
-  <input type="number" name="amount" id="amount" [(ngModel)]="amount">
-  <button (click)="prepareTransfer()">Transfer</button>
-</form>
-<ng-template #transferingMoney>
-  <form action="">
-    <p>You ara going to transfer {{amount}} to {{accountToTransfer.name}}</p>
-    <p>Your new balance will be: {{account.balance - amount}}</p>
-    <p>Type your password here: <input type="password" [(ngModel)]="password" name="password"> </p>
-    <button (click)="confirmTransfer()">Confirm</button>
-    <button>Cancel</button>
-  </form>
-</ng-template>
+
+<h2>Account Overview</h2>
+<p>Placeholder, Location</p>
+
+<div class="infoBox">
+  <p>Name: PlacehoderName</p>
+  <p>Email: PlaceholderEmail </p>
+  <p>Balance: PlaceholderBalance </p>
+  <p>Account Type: PlaceholderType</p>
+    <app-black-button [width]="'220px'" [height]="'45px'" [buttonFunction]="teestFunction.bind(this)" [text]="'Edit Profile'" [marginLeft]="'331.5px'" [fontSize]="'16px'"></app-black-button>
+</div>

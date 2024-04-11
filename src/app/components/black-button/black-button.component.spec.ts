@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DeactivateComponent } from './deactivate.component';
+import { BlackButtonComponent } from './black-button.component';
 
-describe('DeactivateComponent', () => {
-  let component: DeactivateComponent;
-  let fixture: ComponentFixture<DeactivateComponent>;
+describe('BlackButtonComponent', () => {
+  let component: BlackButtonComponent;
+  let fixture: ComponentFixture<BlackButtonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DeactivateComponent]
+      declarations: [BlackButtonComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(DeactivateComponent);
+    fixture = TestBed.createComponent(BlackButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

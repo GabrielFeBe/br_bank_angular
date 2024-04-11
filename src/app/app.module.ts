@@ -11,7 +11,6 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthInterceptor } from './interceptors/token.interceptor';
-import { DeactivateComponent } from './deactivate/deactivate.component';
 import { ActivateComponent } from './activate/activate.component';
 import { StatementComponent } from './statement/statement.component';
 import { StatementPageComponent } from './statement-page/statement-page.component';
@@ -20,6 +19,10 @@ import { HomeComponent } from './home/home.component';
 import { CustomBoxComponent } from './home/custom-box/custom-box.component';
 import { CustomSectionComponent } from './home/custom-section/custom-section.component';
 import { FooterComponent } from './footer/footer.component';
+import { CustomCardComponent } from './profile/custom-card/custom-card.component';
+import { BlackButtonComponent } from './components/black-button/black-button.component';
+import { ProfileEditComponent } from './profile-edit/profile-edit.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,6 @@ import { FooterComponent } from './footer/footer.component';
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
-    DeactivateComponent,
     ActivateComponent,
     StatementComponent,
     StatementPageComponent,
@@ -36,13 +38,17 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     CustomBoxComponent,
     CustomSectionComponent,
-    FooterComponent
+    FooterComponent,
+    CustomCardComponent,
+    BlackButtonComponent,
+    ProfileEditComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [
     CookieService,

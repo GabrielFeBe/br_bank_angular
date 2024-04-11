@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileService } from './profile.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -8,18 +9,18 @@ import { ProfileService } from './profile.service';
 })
 export class ProfileComponent implements OnInit {
 
-constructor(  private service:ProfileService){}
+constructor(  private service:ProfileService, private router:Router){}
   balance = 0;
   account:any | null = null;
   amount = 0;
   cpf = ''
   accountToTransfer: any | null = null;
   password:string='';
-
+  imageUrl = `url('../../assets/house.png')`;
   ngOnInit(): void {
-     this.service.getAccount().subscribe((res)=>{
-      this.account = res;
-    },(err)=>{ console.log(err)}, ()=>{})
+    //  this.service.getAccount().subscribe((res)=>{
+    //   this.account = res;
+    // },(err)=>{ console.log(err)}, ()=>{})
   }
 
 
@@ -54,5 +55,10 @@ cancelTransfer() {
   this.accountToTransfer = null;
 }
 
+teestFunction(){
+  console.log('teste')
+  console.log(this.router);
+  this.router.navigate(['/profile/edit']);
+}
 
 }
