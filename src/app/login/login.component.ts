@@ -18,6 +18,11 @@ constructor(private service:LoginService, private router:Router, private cookies
  
 ngOnInit(): void {
  const token = this.cookies.get('auth')
+  const element = document.querySelector('body');
+  console.log(element)
+  const login = document.querySelector('main');
+  login!.style.height = `calc(100dvh - ${element!.clientHeight}px )`;
+  // login!.style.height = '100vh'
   if(token) this.router.navigate(['/profile'])
 }
 

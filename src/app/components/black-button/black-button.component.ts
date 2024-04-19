@@ -11,8 +11,10 @@ export class BlackButtonComponent {
   @Input() height!: string;
   @Input() text!: string;
   @Input() fontSize!: string;
+  @Input() marginTop!: string;
   @Input() marginRight!: string;
   @Input() marginLeft!: string;
+  @Input() padding!: string;
   @Input() buttonFunction!: () => void;
 
 

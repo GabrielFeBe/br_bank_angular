@@ -32,12 +32,7 @@
 }
 
 
-form{
-  margin-top: 33.5px;
-  margin-left: 40px;
-  background-color: transparent;
 
-}
 
 label{
   background-color: transparent;
@@ -54,7 +49,23 @@ label{
     margin-bottom: 29.5px;
     height: 48px;
     border-radius: 1000px;
-    width: 780px;
+    width: 785px;
     border: 0;
   }
+}
+
+form{
+  margin-top: 33.5px;
+  margin-left: 40px;
+  background-color: transparent;
+  div{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin: 0 !important;
+    input{
+      width: 377px;
+    }
+  }
+
 }

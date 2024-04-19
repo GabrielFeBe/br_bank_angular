@@ -44,3 +44,6 @@
 ></app-custom-section>
 
 </article>
+
+<app-modal *ngIf="showDialog" [message]="'Deseja confirmar essa ação?'"
+(confirmed)="onCloseDialog($event)"></app-modal>

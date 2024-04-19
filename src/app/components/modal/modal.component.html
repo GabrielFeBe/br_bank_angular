@@ -1,0 +1,10 @@
+<div class="modal">
+  <section class="modalContent">
+    <p>{{ message }}</p>
+    <div class="buttonBox">
+      <app-black-button [text]="'Confirm'" [buttonFunction]="confirm.bind(this)" [padding]="'10px'"></app-black-button>
+      <app-black-button [text]="'Cancel'" [buttonFunction]="cancel.bind(this)"   [padding]="'10px'"></app-black-button>
+    </div>
+  </section>
+</div>
+<div class="modal-backdrop"></div>

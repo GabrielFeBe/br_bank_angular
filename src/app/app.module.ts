@@ -23,6 +23,7 @@ import { CustomCardComponent } from './profile/custom-card/custom-card.component
 import { BlackButtonComponent } from './components/black-button/black-button.component';
 import { ProfileEditComponent } from './profile-edit/profile-edit.component';
 import { RouterModule } from '@angular/router';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { RouterModule } from '@angular/router';
     FooterComponent,
     CustomCardComponent,
     BlackButtonComponent,
-    ProfileEditComponent
+    ProfileEditComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

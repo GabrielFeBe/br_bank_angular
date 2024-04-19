@@ -1,5 +1,13 @@
-<form >
-<input type="email" name="" id="" [(ngModel)]="email" name="email">
-<input type="password" [(ngModel)]="password" name="password">
-<button (click)="login()">Login</button>
-</form>
+<div class="headerHolder"></div>
+<main>
+  <form >
+    <label for="email">Email
+      <input type="email" name="" id="" [(ngModel)]="email" name="email" id="email">
+    </label>
+    <label for="password">
+      Password
+      <input type="password" [(ngModel)]="password" name="password" id="password">
+    </label>
+    <app-black-button [buttonFunction]="login" [text]="'Login'" [padding]="'15px'" [fontSize]="'16px'" [marginTop]="'30px'"></app-black-button>
+  </form>
+</main>
